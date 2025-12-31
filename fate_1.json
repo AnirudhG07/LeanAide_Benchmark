@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "informal_statement": "Inductively define $G^n=G\\times G\\times\\cdots \\times G$, the product of $n$ same groups $G$. If $G$ is a finite group, prove that this group has order $|G|^n$.",
+    "formal_statement": "import Mathlib\n\n/--\nInductively define $G^n=G\\times G\\times\\cdots \\times G$, the product of $n$ same groups $G$.\nIf $G$ is a finite group, prove that this group has order $|G|^n$.\n-/\ntheorem prod_card_eq_card_pow {G : Type*} [Fintype G] [Group G] (n : ℕ) :\n    Fintype.card (Π _ : Fin n, G) = (Fintype.card G) ^ n := by\n  sorry",
+    "source": "FATE-M"
+  },
+  {
+    "id": 2,
+    "informal_statement": "Let $G$ be a cyclic group with generator $a$, and let $G^{\\prime}$ be a group isomorphic to $G$. If $\\phi: G \\rightarrow G^{\\prime}$ is an isomorphism, show that, for every $x \\in G, \\phi(x)$ is completely determined by the value $\\phi(a)$. That is, if $\\phi: G \\rightarrow G^{\\prime}$ and $\\psi: G \\rightarrow G^{\\prime}$ are two isomophisms such that $\\phi(a)=\\psi(a)$, then $\\phi(x)=\\psi(x)$ for all $x \\in G$.",
+    "formal_statement": "import Mathlib\n\n/--\nLet $G$ be a cyclic group with generator $a$, and let $G^{\\prime}$ be a group isomorphic to $G$.\nIf $\\phi: G \\rightarrow G^{\\prime}$ is an isomorphism, show that, for every $x \\in G, \\phi(x)$ is\ncompletely determined by the value $\\phi(a)$. That is, if $\\phi: G \\rightarrow G^{\\prime}$ and\n$\\psi: G \\rightarrow G^{\\prime}$ are two isomophisms such that $\\phi(a)=\\psi(a)$,\nthen $\\phi(x)=\\psi(x)$ for all $x \\in G$.\n-/\ntheorem monoidHom_eq_of_isCyclic {G G' : Type*} [Group G] [Group G'] (a : G)\n    (h : ∀ g : G, ∃ n, g = a ^ n) (f1 f2 : G →* G') (heq : f1 a = f2 a) :\n    ∀ g : G, f1 g = f2 g := by\n  sorry",
+    "source": "FATE-M"
+  }
+]
