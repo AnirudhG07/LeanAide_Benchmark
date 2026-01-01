@@ -1,0 +1,3 @@
+[submodule "Datasets/FATE"]
+	path = Datasets/FATE
+	url = https://github.com/frenzymath/FATE
